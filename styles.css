@@ -3,6 +3,7 @@
     --bg-bottom-color: linear-gradient(180deg, #08090a, #222326);
     --bg-middle-color: #08090a;
     --navbar-bg: #FFFFFF08;
+    --navbar-border: rgb(58, 58, 58);
     --heading-color: #F4F5F8;
     --button-color: #111111;
     --button-bg: #EFEFEF;
@@ -11,7 +12,10 @@
     --svg-color: #9B9B9D;
     --svg-color-arrow-theme: white;
     --svg-color-arrow-theme-bg: #FFFFFF08;
+    --svg-arrow-theme-hover: #08090a;
     --footer-bg: #08090a;
+    --bar-button-color-active: black;
+    --bar-button-bg-active: #FFFFFF;
 
 }
 
@@ -20,6 +24,7 @@
     --bg-bottom-color: linear-gradient(180deg, #f4f5f8, #fff);
     --bg-middle-color: #F4F5F8;
     --navbar-bg: #FFFFFF99;
+    --navbar-border: rgb(224, 212, 212);
     --heading-color: #222326;
     --button-color: #FCFCFC;
     --button-bg: #202020;
@@ -28,8 +33,10 @@
     --svg-color: #9B9B9D;
     --svg-color-arrow-theme: black;
     --svg-color-arrow-theme-bg: #FFFFFF99;
+    --svg-arrow-theme-hover: #FFFFFF99;
     --footer-bg: #E5E7EB;
-  
+    --bar-button-color-active: #FFFFFF;
+    --bar-button-bg-active: #222326;
 }
 
 * {
@@ -66,7 +73,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    border: 1px solid rgb(58, 58, 58);
+    border: 1px solid var(--navbar-border);
     margin-top: 15px;
     margin-left: 24px;
     margin-right: 24px;
@@ -79,9 +86,24 @@ body {
     left: 0;*/
 }
 
-.nav-items img {
+.top-logo-dark {
     width: 130px;
     height: 25px;
+}
+
+.top-logo-dark {
+    width: 130px;
+    height: 25px;
+    display: none;
+}
+
+@media (prefers-color-scheme: light) {
+    .top-logo-dark {
+        display: none;
+    }
+    .top-logo-light {
+        display: inline;
+    }
 }
 
 .nav-items button {
@@ -135,7 +157,7 @@ body {
 .email input {
     width: 230px;
     height: 30px;
-    border: 0.1px solid rgb(58, 58, 58);
+    border: 0.1px solid var(--navbar-border);
     color: var(--heading-color);
     background: var(--input-bg);
     padding: 4px 12px;
@@ -239,8 +261,8 @@ input:focus {
 }
 
 .bar button.active {
-    color: black;
-    background-color: #FFFFFF;
+    color: var(--bar-button-color-active);
+    background-color: var(--bar-button-bg-active);
 }
 
 
@@ -266,7 +288,7 @@ input:focus {
 }
 
 .left-arrow:hover {
-    background-color: black;
+    background-color: var(--svg-arrow-theme-hover);
 }
 
 .right-arrow {
@@ -286,7 +308,7 @@ input:focus {
 }
 
 .right-arrow:hover {
-    background-color: black;
+    background-color: var(--svg-arrow-theme-hover);
 }
 
 .topics {
@@ -456,7 +478,7 @@ footer {
 }
 
 .theme:hover {
-    background-color: #08090a;
+    background-color: var(--svg-arrow-theme-hover);
 }
 
 .theme:focus {
