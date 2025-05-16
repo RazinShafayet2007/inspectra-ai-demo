@@ -551,10 +551,11 @@ footer {
 
 }
 
-@media (min-width: 400px) and (max-width: 768px) {
+@media (max-width: 768px) {
     body {
         font-size: 18px;
         max-width: 100%;
+        margin: auto;
     }
 
     .navbar {
