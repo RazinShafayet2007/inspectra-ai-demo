@@ -42,16 +42,29 @@
 * {
     margin: 0;
     padding: 0;
+    /*box-sizing: border-box;*/
 }
 
 body {
     margin: auto;
+    max-width: 100%;
     height: 550px;
     background: var(--bg-top-color);
     color: white;
     font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
     animation: slideDown 0.5s ease-in forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -227,7 +240,7 @@ input:focus {
 
 .hero-2 {
     /*background-color: black;*/
-    background-color: #EEEEEE;
+    background-color: var(--footer-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -497,7 +510,7 @@ footer {
     border-radius: 5px;
     position: absolute;
     right: 2%;
-    top: 2700%;
+    top: 285%;
     transform: translateY(-90deg);
 }
 
@@ -551,134 +564,235 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     body {
-        font-size: 18px;
         max-width: 100%;
-        margin: auto;
+    }
+    .navbar {
+        width: 312px;
+        height: 58px;
     }
 
-    .navbar {
-        height: 30px;
-        max-width: 100%;
-        margin-left: 5px;
-    }
     .nav-items {
-        height: 38px;
-        width: 350px;
-        padding: 12px;
-        margin-top: 15px;
-        margin-left: 12px;
-        margin-right: 12px;
-        border-radius: 5px;
+        padding: 12px 20px;
     }
 
     .nav-items img {
-        width: 130px;
         height: 25px;
-        margin-left: 5px;
+        width: 130px;
     }
 
     .nav-items button {
-        margin-top: 2px;
-        margin-bottom: 2px;
-        margin-right: 5px;
+        width: 103px;
         height: 32px;
-        width: 102px;
         font-size: 14px;
-        border-radius: 10px;
-        padding: 0 12px;
     }
 
     .hero-1 {
-        margin-top: 60px;
-        height: 300px;
-        max-width: 100%;
-        
+        /*margin-left: 25px;*/
     }
 
     .hero-1 h1 {
-        width: 300px;
+        width: 283px;
         height: 80px;
-        font-size: 40px;
-        font-weight: 400;
-        margin-left: 4.5rem;
+        font-size: 36px;
     }
 
     .hero-1 p {
-        width: 363px;
+        width: 312px;
         height: 72px;
-        font-size: 20px;
-        margin-left: 3rem;
+        font-size: 16px;
     }
 
     .email {
         flex-direction: column;
-        height: auto;
-        max-width: 100%;
-        padding: 0 12px;
+        gap: 10px;
     }
 
     .email input {
-        height: 40px;
-        width: 350px;
-        font-size: 16px;
-        margin-top: 30px;
-        margin-left: 3px;
+        width: 280px;
+        height: 30px;
     }
 
-    .button-1,
-    .button-2 {
-        width: 364px;
+    .button-1 {
+        width: 280px;
         height: 40px;
-        font-size: 14px;
-        margin-top: 5px;
+        margin-left: 20px;
     }
 
     .button-2 {
-    padding-left: 9rem;
+        width: 280px;
+        height: 40px;
+        margin-left: 20px;
     }
 
     .button-2 img {
-        height: 20px;
-        width: 20px;
-    }
-
-    .hero-2 {
-        padding: 12px;
-        height: 80px;
-        max-width: 100%;
+        margin-left: 60px;
     }
 
     .bar {
-        width: 340px;
-        height: 20px;
-        margin-top: 150px;
-        z-index: 1;
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 30px;
     }
 
-    .bar button {
-        font-size: 7px;
-        height: 15px;
-        border-radius: 5px;
-    }
-
-    .left-arrow,
-    .right-arrow {
+    .left-arrow, .right-arrow {
         display: none;
     }
 
-    .image-container {
-        max-width: 100%;
-    }
+    .bar button {
+        width: 270px;
+        flex: 0 0 auto; /* prevents shrinking */
+      }
+
+      .bar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .bar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+      }
+
+      .image-container {
+        margin-top: 20px;
+      }
+
 
     .images {
-        margin-top: 250px;
-        margin-left: 0px;
+        width: 310px;
+        height: 174px;
+    }
+    
+    .images img {
+        width: 310px;
+        height: 174px;
+    }
+
+    .texts {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    
+    .texts h2 {
+        width: 312px;
+        height: 128px;
+        font-size: 24px;
+        margin-left: 50px;
+    }
+
+    .texts button {
+        margin-top: 0px;
+        margin-left: 130px;
+        margin-bottom: 130px;
+    }
+    
+
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+    body {
+        max-width: 100%;
+    }
+    .navbar {
+        width: 364px;
+        height: 58px;
+    }
+
+    .nav-items {
+        padding: 12px 20px;
+    }
+
+    .nav-items img {
+        height: 25px;
+        width: 130px;
+    }
+
+    .nav-items button {
+        width: 103px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .hero-1 {
+        /*margin-left: 25px;*/
+    }
+
+    .hero-1 h1 {
+        width: 283px;
+        height: 80px;
+        font-size: 36px;
+    }
+
+    .hero-1 p {
+        width: 364px;
+        height: 72px;
+        font-size: 16px;
+    }
+
+    .email {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .email input {
+        width: 355px;
+        height: 30px;
+    }
+
+    .button-1 {
+        width: 355px;
+        height: 40px;
+        margin-left: 20px;
+    }
+
+    .button-2 {
+        width: 355px;
+        height: 40px;
+        margin-left: 20px;
+    }
+
+    .button-2 img {
+        margin-left: 100px;
+    }
+
+    .bar {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 30px;
+    }
+
+    .left-arrow, .right-arrow {
+        display: none;
+    }
+
+    .bar button {
+        width: 270px;
+        flex: 0 0 auto; /* prevents shrinking */
+      }
+
+      .bar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .bar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+      }
+
+      .image-container {
+        margin-top: 20px;
+      }
+
+
+    .images {
         width: 362px;
         height: 203px;
     }
-
     
     .images img {
         width: 362px;
@@ -686,67 +800,23 @@ footer {
     }
 
     .texts {
-        margin-top: 60px;
         flex-direction: column;
-        max-width: 100%;
-        height: 300px;
-        height: 3rem;
+        margin-top: 100px;
     }
-
+    
     .texts h2 {
-        width: 364px;
-        height: 96px;
-        font-size: 28px;
-        margin-left: 3rem;
-        margin-top: 50px;
+        width: 312px;
+        height: 128px;
+        font-size: 24px;
+        margin-left: 50px;
     }
 
     .texts button {
-        width: 110px;
-        height: 50px;
-        font-size: 14px;
-        margin-left: 8.5rem;
-        margin-top: 70px;
+        margin-top: 0px;
+        margin-left: 130px;
+        margin-bottom: 130px;
     }
+    
 
-    .footer-1 {
-        padding-top: 0;
-        margin-top: 0;
-        height: 8rem;
-        max-width: 100%;
-
-    }
-
-    .footer-1 img {
-        margin-top: 60px;
-        margin-left:5px;
-        width: 130px;
-        height: 25px;
-    }
-
-    .theme {
-        margin-top: 3rem;
-        height: 2rem;
-        width: 2rem;
-    }
-
-    .footer-2 {
-        margin-left: 12px;
-        font-size: 3px;
-    }
-
-    .footer-2 li {
-        margin-left: 1rem;
-    }
-
-    .footer-3 {
-        margin-left: 12px;
-        margin-top: 40px;
-        gap: 1.5rem;
-    }
-
-    .footer-3 svg {
-        height: 1rem;
-        width: 1rem;
-    }
 }
+
