@@ -585,7 +585,7 @@ footer {
     .nav-items button {
         width: 103px;
         height: 32px;
-        font-size: 14px;
+        font-size: 0.7rem;
     }
 
     .hero-1 {
@@ -631,7 +631,7 @@ footer {
     }
 
     .bar {
-    width: 100%;
+    width: 90%;
     overflow-x: auto;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -643,8 +643,10 @@ footer {
     }
 
     .bar button {
-        width: 270px;
-        flex: 0 0 auto; /* prevents shrinking */
+        width: 100px;
+        height: 30px;
+        font-size: 0.7rem;
+        flex: 0 0 auto;
       }
 
       .bar::-webkit-scrollbar {
@@ -688,6 +690,10 @@ footer {
         margin-left: 130px;
         margin-bottom: 130px;
     }
+
+    #menuList {
+        top: 220%;
+    }
     
 
 }
@@ -713,7 +719,7 @@ footer {
     .nav-items button {
         width: 103px;
         height: 32px;
-        font-size: 14px;
+        font-size: 0.7rem;
     }
 
     .hero-1 {
@@ -759,7 +765,7 @@ footer {
     }
 
     .bar {
-    width: 100%;
+    width: 90%;
     overflow-x: auto;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -771,7 +777,9 @@ footer {
     }
 
     .bar button {
-        width: 270px;
+        width: 100px;
+        height: 30px;
+        font-size: 0.7rem;
         flex: 0 0 auto; /* prevents shrinking */
       }
 
@@ -815,6 +823,10 @@ footer {
         margin-top: 0px;
         margin-left: 130px;
         margin-bottom: 130px;
+    }
+
+    #menuList {
+        top: 225%;
     }
     
 
